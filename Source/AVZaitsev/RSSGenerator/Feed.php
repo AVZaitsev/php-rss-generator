@@ -5,6 +5,7 @@ namespace AVZaitsev\RSSGenerator;
 use DOMDocument;
 use AVZaitsev\RSSGenerator\FeedInterface;
 use AVZaitsev\RSSGenerator\ChannelInterface;
+use SimpleXMLElement;
 
 class Feed implements FeedInterface
 {
