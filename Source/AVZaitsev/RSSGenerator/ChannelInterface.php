@@ -1,9 +1,9 @@
 <?php
 
-namespace Bhaktaraz\RSSGenerator;
+namespace AVZaitsev\RSSGenerator;
 
-use Bhaktaraz\RSSGenerator\FeedInterface;
-use Bhaktaraz\RSSGenerator\SimpleXMLElement;
+use AVZaitsev\RSSGenerator\FeedInterface;
+use SimpleXMLElement;
 
 interface ChannelInterface
 {
@@ -17,17 +17,10 @@ interface ChannelInterface
 
     /**
      * Set channel URL
-     * @param string $url
+     * @param string $link
      * @return $this
      */
-    public function url($url);
-
-    /**
-     * Set atom:link with rel="self"
-     * @param string $atomLinkSelf
-     * @return $this
-     */
-    public function atomLinkSelf($atomLinkSelf);
+    public function link($link);
 
     /**
      * Set channel description
@@ -83,18 +76,6 @@ interface ChannelInterface
      * @return $this
      */
     public function addItem(ItemInterface $item);
-
-    /**
-     * @param $updatePeriod
-     * @return $this
-     */
-    public function updatePeriod($updatePeriod);
-
-    /**
-     * @param $updateFrequency
-     * @return $this
-     */
-    public function updateFrequency($updateFrequency);
 
     /**
      * Append to feed

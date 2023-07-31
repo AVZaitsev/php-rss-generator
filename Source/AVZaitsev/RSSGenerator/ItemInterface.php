@@ -1,9 +1,9 @@
 <?php
 
-namespace Bhaktaraz\RSSGenerator;
+namespace AVZaitsev\RSSGenerator;
 
-use Bhaktaraz\RSSGenerator\ChannelInterface;
-use Bhaktaraz\RSSGenerator\SimpleXMLElement;
+use AVZaitsev\RSSGenerator\ChannelInterface;
+use SimpleXMLElement;
 
 interface ItemInterface
 {
@@ -17,18 +17,10 @@ interface ItemInterface
 
     /**
      * Set item URL
-     * @param string $url
+     * @param string $link
      * @return $this
      */
-    public function url($url);
-
-    /**
-     * Set author name for article
-     *
-     * @param $creator
-     * @return $this
-     */
-    public function creator($creator);
+    public function link($link);
 
     /**
      * Set item description
@@ -36,12 +28,6 @@ interface ItemInterface
      * @return $this
      */
     public function description($description);
-
-    /**
-     * @param $content
-     * @return $this
-     */
-    public function content($content);
 
     /**
      * Set item category
@@ -57,7 +43,7 @@ interface ItemInterface
      * @param bool $isPermalink
      * @return $this
      */
-    public function guid($guid, $isPermalink = false);
+    public function guid($guid);
 
     /**
      * Set published date

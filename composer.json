@@ -1,15 +1,14 @@
 {
-    "name": "bhaktaraz/php-rss-generator",
+    "name": "avzaitsev/php-rss-generator",
     "type": "library",
-    "description": "Simple RSS generator library for PHP 5.5 or later.",
+    "description": "Simple RSS 2.0 generator library for PHP 5.5 or later.",
     "keywords": [
         "rss",
         "generator",
         "writer",
-        "feed",
-        "Facebook product feed generator"
+        "feed"
     ],
-    "homepage": "https://github.com/bhaktaraz/php-rss-generator",
+    "homepage": "https://github.com/AVZaitsev/php-rss-generator",
     "license": "MIT",
     "authors": [
         {
@@ -22,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bhaktaraz\\RSSGenerator\\": "Source/Bhaktaraz/RSSGenerator/"
+            "AVZaitsev\\RSSGenerator\\": "Source/AVZaitsev/RSSGenerator/"
         }
     }
 }

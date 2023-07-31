@@ -1,10 +1,10 @@
 <?php
 
-namespace Bhaktaraz\RSSGenerator;
+namespace AVZaitsev\RSSGenerator;
 
 use DOMDocument;
-use Bhaktaraz\RSSGenerator\FeedInterface;
-use Bhaktaraz\RSSGenerator\ChannelInterface;
+use AVZaitsev\RSSGenerator\FeedInterface;
+use AVZaitsev\RSSGenerator\ChannelInterface;
 
 class Feed implements FeedInterface
 {
@@ -30,8 +30,10 @@ class Feed implements FeedInterface
      */
     public function render()
     {
-        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">',
-            LIBXML_NOERROR | LIBXML_ERR_NONE | LIBXML_ERR_FATAL);
+        $xml = new SimpleXMLElement(
+            '<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0">',
+            LIBXML_NOERROR | LIBXML_ERR_NONE | LIBXML_ERR_FATAL
+        );
 
         foreach ($this->channels as $channel) {
             $toDom = dom_import_simplexml($xml);
